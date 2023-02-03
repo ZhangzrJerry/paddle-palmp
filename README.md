@@ -1,10 +1,20 @@
-### 飞桨学习赛：PALM病理性近视预测
+# 飞桨学习赛：PALM病理性近视预测
 
-master只是默认分支，具体代码请看标签或发行版，已标注每份代码对应的分数
+### 项目说明
 
-从 https://aistudio.baidu.com/aistudio/competition/detail/85/0/datasets 下载数据集并解压，还需要把`Classification.xlsx`转为`Classification.csv`
+基于[飞桨学习赛：PALM病理性近视预测](https://aistudio.baidu.com/aistudio/competition/detail/85/0/introduction)，验证学习众多的图像分类模型
 
-`main.ipynb`中需要修改的参数是
-- `训练集图片所在文件夹`
-- `写有训练集标签的csv路径`
-- `测试集图片所在文件夹`
+1. 首先主要跟随[飞桨教程](https://www.paddlepaddle.org.cn/tutorials/projectdetail/4464926)验证了VGG、GoogLeNet和ResNet模型，三个模型在训练集上都能达到95%左右的准确率，但在测试集上只有50-55%的准确率，主要是没有合理划分训练集和验证集，以及没有对模型正则化处理 
+
+### 快速开始
+
+1. 从发行版中选择合适的代码并克隆到本地
+
+1. 从 https://aistudio.baidu.com/aistudio/competition/detail/85/0/datasets 下载数据集并解压
+
+1. 把`Train`目录下的`Classification.xlsx`转为`Classification.csv`
+
+1. 修改`main.ipynb`中的参数并运行
+    - `训练集图片所在文件夹`
+    - `写有训练集标签的csv路径`
+    - `测试集图片所在文件夹`
